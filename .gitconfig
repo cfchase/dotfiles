@@ -57,6 +57,12 @@
 	# List contributors with number of commits
 	contributors = shortlog --summary --numbered
 
+	# Undo a `git push`
+	undopush = push -f origin HEAD^:master
+ 
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
@@ -85,9 +91,9 @@
 
 [color "branch"]
 
-	current = yellow reverse
-	local = yellow
-	remote = green
+	current = green reverse
+	local = green
+	remote = magenta
 
 [color "diff"]
 
@@ -98,9 +104,9 @@
 
 [color "status"]
 
-	added = yellow
-	changed = green
-	untracked = cyan
+	added = green
+	changed = yellow
+	untracked = red
 
 [diff]
 
@@ -118,11 +124,7 @@
 	log = true
 
 [push]
-
-	# Use the Git 1.x.x default to avoid errors on machines with old Git
-	# installations. To use `simple` instead, add this to your `~/.extra` file:
-	# `git config --global push.default simple`. See http://git.io/mMah-w.
-	default = matching
+	default = current
 
 # URL shorthands
 
@@ -145,3 +147,7 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+[credential]
+	helper = osxkeychain
+
