@@ -91,9 +91,9 @@
 
 [color "branch"]
 
-	current = green reverse
+	current = magenta bold
 	local = green
-	remote = magenta
+	remote = yellow
 
 [color "diff"]
 
