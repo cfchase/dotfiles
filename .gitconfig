@@ -91,7 +91,7 @@
 
 [color "branch"]
 
-	current = magenta bold
+	current = cyan
 	local = green
 	remote = yellow
 
