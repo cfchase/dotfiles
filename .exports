@@ -19,6 +19,3 @@ export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 
 export VAGRANT_VMWARE_CLONE_DIRECTORY="~/Documents/Virtual Machines.localized"
 export VAGRANT_VMWARE_FUSION_APP="/Applications/VMware Fusion.app"
-
-# export PATH=~/bin:/usr/local/bin:/usr/local/opt/ruby/bin:/Applications/pgAdmin3.app/Contents/SharedSupport:$PATH
-export PATH=~/bin:/usr/local/bin:/Applications/Postgres93.app/Contents/MacOS/bin:$M2:$PATH

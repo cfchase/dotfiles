@@ -1,6 +1,5 @@
 # homebrew!
-# you need the code CLI tools YOU FOOL.
-ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go/install)
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # https://github.com/rupa/z
 # z, oh how i love you
@@ -11,4 +10,5 @@ chmod +x ~/bin/z/z.sh
 sudo easy_install Pygments
 mkdir -p ~/.bash_completion.d
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/.bash_completion.d/git-completion.bash
+curl https://raw.githubusercontent.com/bobthecow/git-flow-completion/master/git-flow-completion.bash > ~/.bash_completion.d/git-flow-completion.bash
 

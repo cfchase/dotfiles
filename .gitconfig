@@ -148,6 +148,9 @@
 
 	insteadOf = "gist:"
 
+[remote "origin"]
+	prune = true
+	
 [credential]
 	helper = osxkeychain
 
