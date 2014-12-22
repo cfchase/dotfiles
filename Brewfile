@@ -17,10 +17,12 @@ install wget --enable-iri
 
 # Install other useful binaries
 install git
+install git-flow-avh
 install node # This installs `npm` too using the recommended installation method
 install ruby
 install mongodb
 install phantomjs
+
 
 # Remove outdated versions from the cellar
 cleanup
