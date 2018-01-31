@@ -59,10 +59,12 @@
 
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
- 
-    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
+	# pretty git log tree
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
+	# check out pr from upstream
+	copr = !"c() { git fetch upstream pull/$1/head:pr$1; git checkout \"pr$1\"; }; c"
 [apply]
 
 	# Detect whitespace errors when applying a patch
@@ -150,7 +152,7 @@
 
 [remote "origin"]
 	prune = true
-	
+
 [credential]
 	helper = osxkeychain
 
